@@ -48,16 +48,6 @@ modules:
         url: https://github.com/commonmark/cmark/archive/refs/tags/0.31.1.tar.gz
         sha256: 3da93db5469c30588cfeb283d9d62edfc6ded9eb0edc10a4f5bbfb7d722ea802
 
-  - name: cmark-docs
-    buildsystem: simple
-    build-commands:
-      - mkdir -p /app/share/doc/cmark
-      - install -m0644 -t/app/share/doc/cmark COPYING README.md
-    sources:
-      - type: archive
-        url: https://mkvtoolnix.download/sources/mkvtoolnix-96.0.tar.xz
-        sha256: 509a1e3aca1f63fe5cc96b4c7272ba533dbcbb69c61d1c5114dccf610fd405cb
-
   - name: libdvdcss
     sources:
       - type: archive
@@ -114,3 +104,13 @@ modules:
     sources:
       - type: file
         path: entrypoint.sh
+
+  - name: cmark-docs
+    buildsystem: simple
+    build-commands:
+      - mkdir -p /app/share/doc/cmark
+      - install -m0644 -t/app/share/doc/cmark COPYING README.md
+    sources:
+      - type: archive
+        url: https://mkvtoolnix.download/sources/mkvtoolnix-96.0.tar.xz
+        sha256: 509a1e3aca1f63fe5cc96b4c7272ba533dbcbb69c61d1c5114dccf610fd405cb
